@@ -1,13 +1,12 @@
 import React from 'react';
-import line from '../img/svg/line.svg';
-import '../scss/components/cat.scss';
+import line from '../../img/svg/line.svg';
+import '../../scss/components/cat.scss';
 import Card from './Card';
 
 function Cards(props) {
  
 
   return (
-
 
       <div className="cards__cat">
         <div className="card">
@@ -61,7 +60,6 @@ function Cards(props) {
 
         </div>
       </div>
-
 
   );
 }

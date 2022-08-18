@@ -1,13 +1,13 @@
 import React from 'react';
-import '../scss/components/cat.scss';
+import '../../scss/components/cat.scss';
 import Card from './Card';
 
-import ten from '../img/10000.jpg';
-import twenty from '../img/20000.jpg';
-import twentyFive from '../img/25000.jpg';
-import thirty from '../img/30000.jpg';
-import thirtyOne from '../img/30000-1.jpg';
-import fourty from '../img/40000.jpg';
+import ten from '../../img/10000.jpg';
+import twenty from '../../img/20000.jpg';
+import twentyFive from '../../img/25000.jpg';
+import thirty from '../../img/30000.jpg';
+import thirtyOne from '../../img/30000-1.jpg';
+import fourty from '../../img/40000.jpg';
 
 
 function Cat(props) {
@@ -114,10 +114,11 @@ if (currentSort === 'expensive') {
         </select>
       </div>
 
+	  <div className="max_cat">
     <Card
     	cats ={cats}
     />
-    
+        </div>
     </div>
     </div>
   );

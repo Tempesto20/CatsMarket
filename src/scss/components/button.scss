@@ -1,0 +1,57 @@
+@import '../config';
+@import '../variables';
+
+.button__content {
+    background: #E5E5E5;
+    padding-top: 68px;
+    @media (max-width: $lg) {
+        padding-top: 34px;
+    }
+}
+//Tempesto20
+.button__bottom{
+    padding-bottom: 82px;
+    @media (max-width: $lg) {
+        padding-bottom:  41px;
+    }
+}
+.button__wrap {
+    display: block;
+justify-content: center;
+}
+.button__title {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    max-width: 380px;
+    padding: 24px 129px;
+    border-radius: 15px;
+    border: 1px solid rgb(209, 207, 207);
+    margin-left: 450px;
+    @media (max-width: $xl) {
+        margin-left: 300px;
+    }
+    @media (max-width: $lg) {
+        margin-left: 200px;
+    }
+    @media (max-width: $md) {
+        margin-left: 150px;
+    }
+    @media (max-width: $sm) {
+        max-width: 250px;
+        padding: 24px 60px;
+        margin-left: 40px;
+    }
+    & a{
+        text-decoration: none; 
+    }
+}
+a:hover{
+    color: #6EBBD3;
+} 
+.button__text {
+    white-space: nowrap;
+    margin-left: 0px;
+    color: black;
+}

@@ -1,7 +1,13 @@
 import React from 'react';
+
+import Header from './components/Header/Header';
 import Buy from './components/Buy';
-import Cat from './components/Cat';
-import Header from './components/Header';
+import Cat from './components/Cat/Cat';
+import  Button  from './components/Button/Button';
+import Bottom from './components/Bottom/Bottom';
+
+
+
 
 
 function App() {
@@ -11,7 +17,10 @@ function App() {
     <div>
     <Header />
     <Cat />
+    <Button />
+    <Bottom />
     </div>
+    
   );
 }
 

@@ -75,6 +75,20 @@
         margin: 0px 0px 10px 20px;
     }
 }
+
+
+
+
+.max_cat{
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+
+
+
 .cards__cat {
     display: inline-flex;
     flex-direction: row;
@@ -82,8 +96,9 @@
 
     
 }
+
 .card__cat {
-    display: lex;
+    display: flex;
     flex-wrap: wrap;
 }
 .card{

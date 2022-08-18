@@ -1,6 +1,5 @@
 import React from 'react';
-import three from '../img/30000.jpg';
-import '../scss/components/cat.scss';
+import '../../scss/components/cat.scss';
 import Cards from './Cards';
 
 function Card(props) {
