@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from './components/Header/Header';
-import Buy from './components/Buy';
 import Cat from './components/Cat/Cat';
 import  Button  from './components/Button/Button';
 import Bottom from './components/Bottom/Bottom';

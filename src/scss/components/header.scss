@@ -33,9 +33,11 @@
   align-items: center;
 }
 
+/*
 .header__burger {
   display: none;
 }
+*/
 
 .header__logo {
   z-index: 3;
@@ -209,6 +211,8 @@
     display: block;
   }
 
+
+  /*
   .header__burger {
     order: 3;
     display: block;
@@ -268,4 +272,8 @@
       transition: all 0.3s ease 0s;
     }
   }
+*/
+
+
+
 }

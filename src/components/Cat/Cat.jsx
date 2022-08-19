@@ -8,7 +8,7 @@ import twentyFive from '../../img/25000.jpg';
 import thirty from '../../img/30000.jpg';
 import thirtyOne from '../../img/30000-1.jpg';
 import fourty from '../../img/40000.jpg';
-
+import like from '../../img/svg/like.svg';
 
 function Cat(props) {
 
@@ -18,6 +18,7 @@ function Cat(props) {
 			img: thirty,
 			discount: 40,
 			buy: 'Купить',
+			like: like,
 			isSell: false,
 			isFavorite: false
 		},
@@ -26,6 +27,7 @@ function Cat(props) {
 			img: fourty ,
 			discount: 0,
 			buy: 'Продан',
+			like: like,
 			isSell: true,
 			isFavorite: true
 		},
@@ -34,6 +36,7 @@ function Cat(props) {
 			img: twenty,
 			discount: 0,
 			buy: 'Купить',
+			like: like,
 			isSell: false,
 			isFavorite: false
 		},
@@ -42,6 +45,7 @@ function Cat(props) {
 			img: twentyFive,
 			discount: 0,
 			buy: 'Купить',
+			like: like,
 			isSell: false,
 			isFavorite: false
 		},
@@ -50,6 +54,7 @@ function Cat(props) {
 			img: thirtyOne,
 			discount: 40,
 			buy: 'Купить',
+			like: like,
 			isSell: false,
 			isFavorite: false
 		},
@@ -58,6 +63,7 @@ function Cat(props) {
 			img: ten,
 			discount: 0,
 			buy: 'Продан',
+			like: like,
 			isSell: true,
 			isFavorite: false
 		}

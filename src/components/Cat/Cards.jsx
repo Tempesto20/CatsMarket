@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import line from '../../img/svg/line.svg';
+
 import '../../scss/components/cat.scss';
-import Card from './Card';
+
+import like2 from '../../img/svg/like2.svg';
+
 
 function Cards(props) {
  
+  const [like, setLike] = useState(props.like);
+
+  const chengeLikeHamdler = ()=>{
+    setLike(like2);
+  }
 
   return (
 
@@ -19,6 +27,9 @@ function Cards(props) {
               <p className="discount">-{props.discount}%</p>
               </div>
 
+              <div class="card__like" >
+				        <img src={like} onClick={chengeLikeHamdler}/>
+				      </div>
           <div className="card__background">
             <h2 className="card__title">Кот полосатый</h2>
             <div className="card__cat-row">
@@ -43,7 +54,6 @@ function Cards(props) {
             </div>
             <h3 className="price__cat">{props.price} руб.</h3>
             <div className="buy__cat sold" >
-              
               <a href="#" class="byu__cat-1">
                 {props.buy}
               </a>

@@ -11,9 +11,11 @@ function Header() {
             <div className="header__background">
                 <div className="header__rgda">
                     <div className="header__container section-container">
-                        <div className="js-header__burger header__burger">
+                       
+                        {/* <div className="js-header__burger header__burger">
                             <span></span>
-                        </div>
+                        </div>  */}  
+
                         <div className="header__logo">
                             <img src={logoSvg} alt="" className="header__logo-1"></img>
                         </div>
