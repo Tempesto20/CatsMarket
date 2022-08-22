@@ -9,8 +9,10 @@ import thirty from '../../img/30000.jpg';
 import thirtyOne from '../../img/30000-1.jpg';
 import fourty from '../../img/40000.jpg';
 import like from '../../img/svg/like.svg';
+import SelectCat from './SelectCat';
 
 function Cat(props) {
+
 
     let cats = [
 		{
@@ -70,11 +72,10 @@ function Cat(props) {
 	];
 
 /*
-	if(cats.isSell !== true ){
+	if(props.discount !== 0 ){
 		console.log('ew');
 	}
 */
-
 
 	//cats = cats.sort((a, b) => b.price - a.price); // наибольшее
 	
@@ -87,37 +88,21 @@ if (currentSort === 'expensive') {
 			return a.price - b.price;
 		});
 */
+//const [price, setPrice] = useState(price);
+
+
+//cats = cats.sort((a, b) => b.price - a.price);
+
+
 
   return (
-    <div classNameName="content__cat ">
-    <div classNameName="background__cat ">
-      <div classNameName="head__cat section-container">
-        <h2 classNameName="sorting__cat">Сортировать по:</h2>
-        <select
-          tabindex="10"
-          name="price"
-          classNameName="price__cat-1"
-          id="sort_price"
-        >
-          <option selected>Цена</option>
-          <option value="expensive" classNameName="cat__expensive">
-            Дороже
-          </option>
-          <option value="cheaper" classNameName="cheaper">
-            Дешевле
-          </option>
-        </select>
-        <select tabindex="10" name="color" classNameName="age__cat">
-          <option selected value="age">
-            Возраст
-          </option>
-          <option value="red" classNameName="cat__young">
-            Юные
-          </option>
-          <option value="adults" classNameName="cat__adults">
-            Взрослые
-          </option>
-        </select>
+    <div className="content__cat ">
+    <div className="background__cat ">
+      <div className="head__cat section-container">
+        <h2 className="sorting__cat">Сортировать по:</h2>
+        <SelectCat
+			cats ={cats}
+		/>
       </div>
 
 	  <div className="max_cat">
