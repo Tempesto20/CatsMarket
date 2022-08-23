@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../../scss/components/cat.scss';
 import Card from './Card';
 
@@ -12,7 +12,8 @@ import like from '../../img/svg/like.svg';
 import SelectCat from './SelectCat';
 
 function Cat(props) {
-
+	
+		const [amountPrice, setAmountPrice]=useState('');
 
     let cats = [
 		{
@@ -82,26 +83,28 @@ function Cat(props) {
 	//cats = cats.sort((a, b) => a.price - b.price); // наименьшее
 
 
-/*
-if (currentSort === 'expensive') {
-		cats = cats.sort(function(a, b) {
-			return a.price - b.price;
-		});
-*/
-//const [price, setPrice] = useState(price);
+		const amountChangeHandler =(amount)=>{
+			setAmountPrice(amount);
+			console.log(amount);
+			if(amount === 'more'){
+				console.log('+');
+				cats = cats.sort((a, b) => b.price - a.price);
+			} else{
+				console.log('-');
+				cats = cats.sort((a, b) => a.price - b.price);
+			}
+		}
+		
 
-
-//cats = cats.sort((a, b) => b.price - a.price);
-
-
-
-  return (
+	return (
     <div className="content__cat ">
     <div className="background__cat ">
       <div className="head__cat section-container">
         <h2 className="sorting__cat">Сортировать по:</h2>
         <SelectCat
 			cats ={cats}
+			amount={amountPrice}
+			onChangeAmount ={amountChangeHandler}
 		/>
       </div>
 
