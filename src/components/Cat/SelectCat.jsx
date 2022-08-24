@@ -1,30 +1,9 @@
-//import React,{useState} from 'react';
-import '../../scss/components/cat.scss';
+import React from 'react';
+import '../../scss/components/selectCat.scss';
 
 function SelectCat(props) {
 
-   // const [price, setPrice] = useState(props.price);
 
-   /*
-    const amountHendler =(event)=>{
-        //console.log(event.target.value);
-        //const i = event.target.value;
-        //const more = "more";  kek
-        
-        if("more" === event.target.value){
-            console.log('1');
-            //props.cats = props.cats.sort((a, b) => a.price - b.price);
-  //          setPrice(props.cats = props.cats.sort((a, b) => b.price - a.price));
-        } else{
-            console.log('2');
-            //props.cats = props.cats.sort((a, b) => b.price - a.price);
-    //        setPrice(props.cats = props.cats.sort((a, b) => a.price - b.price));
-        }
-        
-    }
-    
-    //cats = cats.sort((a, b) => b.price - a.price);
-*/
 const amountHendler =(event)=>{
     props.onChangeAmount(event.target.value);
     //console.log(event.target.value);

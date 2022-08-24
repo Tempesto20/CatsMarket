@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../scss/components/cat.scss';
 import Cards from './Cards';
 
 
