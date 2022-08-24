@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import line from '../../img/svg/line.svg';
 
-import '../../scss/components/cat.scss';
+import  '../../scss/components/cat.scss';
 
 import like2 from '../../img/svg/like2.svg';
 
@@ -14,6 +14,68 @@ function Cards(props) {
     setLike(like2);
 
   }
+  /*
+  let cssCardDiscount =  className="card__discount";
+    if(props.discount !== 0){
+      cssCardDiscount;
+    }
+
+    let cssDiscount =  className="discount";
+    if(props.discount !== 0){
+      cssDiscount;
+    }
+*/
+ /*
+let cssDiscount =props.discount;
+const cssCardDiscount =()=>{
+  if(cssDiscount !== 0){
+    style="card__discount";
+  }
+}
+    position: absolute;
+    top: 34px;
+    left: 60px;
+
+
+        font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    background: #E52D2D;
+    padding: 8px 10px;
+    border-radius: 10px;
+*/
+/*
+let cssCardDiscount =()=>{
+  if(props.discount > 0){
+    return(
+    <div className="card__discount" >
+    <p className="discount" >-{props.discount}%</p>
+    </div>)
+  }
+}
+*/
+
+const cardDiscount = 
+<div className="card__discount" >
+<p className="discount" >-{props.discount}%</p>
+</div>;
+
+const cardDiscountNone = <div></div>
+
+const catBuy=  
+<div className="buy__cat" >
+  <a href="#" class="byu__cat-1">
+    {props.buy}
+  </a>
+</div>;
+
+const catSold =
+<div className="buy__cat sold" >
+<a href="#" class="byu__cat-1">
+  {props.buy}
+</a>
+</div>;
+
 
   return (
 
@@ -24,9 +86,11 @@ function Cards(props) {
             <img src={props.img} />
           </div>
 
-          <div className="card__discount">
-              <p className="discount">-{props.discount}%</p>
+{/*          <div className="card__discount" >
+              <p className="discount" >-{props.discount}%</p>
               </div>
+  */}
+            {props.discount !== 0 ? (cardDiscount):(cardDiscountNone) }
 
               <div class="card__like" >
 				        <img src={like} onClick={chengeLikeHamdler}/>
@@ -54,21 +118,11 @@ function Cards(props) {
               </div>
             </div>
             <h3 className="price__cat">{props.price} руб.</h3>
-            <div className="buy__cat sold" >
-              <a href="#" class="byu__cat-1">
-                {props.buy}
-              </a>
-            </div>
-                        {/*
-                          <div class="buy__cat">
-                              <a href="#" class="byu__cat-1">Купить</a>
-                          </div>
-                          */}
+          
+            {props.buy !== 'Продан' ? (catBuy):(catSold)}
                           
           </div>
         
-
-
         </div>
       </div>
 
