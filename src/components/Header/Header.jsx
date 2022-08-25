@@ -12,7 +12,12 @@ function Header() {
     return (
         <header className="header">
             <div className="header__background">
+
+
                 <div className="header__rgda">
+
+                <div className="header_maxWidth">
+                    
                     <div className="header__container section-container">
                          
             <BurgerMenu />
@@ -55,6 +60,9 @@ function Header() {
                             </div>
                         </div>
                     </div>
+                    
+                </div>
+
                 </div>
             </div>
         </header>
