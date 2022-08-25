@@ -10,6 +10,9 @@ const MenuButton = styled.button`
   display: none; //скрыл кнопку до сужения до нужных параметров 
 
   @media (max-width: 1000px) {
+  
+  position: absolute;
+  z-index: 10;
   display: block;
   transform-origin: 16px 11px; 
   float: left;
