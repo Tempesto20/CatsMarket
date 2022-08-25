@@ -37,6 +37,8 @@ const catSold =
 </div>;
 
 
+
+
   return (
 
       <div className="cards__cat">

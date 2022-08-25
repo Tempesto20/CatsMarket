@@ -71,12 +71,6 @@ function Cat(props) {
 	
 		const [amountPrice, setAmountPrice]=useState(cats);
 
-/*
-	if(props.discount !== 0 ){
-		console.log('ew');
-	}
-*/
-
 		const amountChangeHandler =(amount)=>{
 			setAmountPrice(amount);
 			//console.log(amount);

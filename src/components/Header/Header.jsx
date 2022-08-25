@@ -1,6 +1,9 @@
 import React from 'react';
 
 import logoSvg from '../../img/svg/logo.svg';
+import BurgerMenu from '../BurgerMenu';
+
+
 
 
 
@@ -11,7 +14,9 @@ function Header() {
             <div className="header__background">
                 <div className="header__rgda">
                     <div className="header__container section-container">
-                       
+                         
+            <BurgerMenu />
+
                         {/* <div className="js-header__burger header__burger">
                             <span></span>
                         </div>  */}  
