@@ -37,8 +37,8 @@ function Header() {
                                         <a href="#news" className="header__nav-link">News</a>
                                     </li>
                                     <li className="header__nav-item">
-                                        <a href="https://krasnodar.hh.ru/resume/bcf30d3eff08eab8a70039ed1f5a73644e4371"
-                                            target="_blanc" className="header__nav-link"> Profile</a>
+                                        <a href="https://tempesto20.github.io/Summary.github.io-/" target="_blanc"
+                                         className="header__nav-link"> Profile</a>
                                     </li>
                                 </ul>
                             </nav>

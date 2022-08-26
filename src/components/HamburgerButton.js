@@ -15,7 +15,8 @@ const MenuButton = styled.button`
   z-index: 10;
   display: block;
   transform-origin: 16px 11px; 
-  float: left;
+  //float:right;
+  //float: left;
   //margin-right: 29px;  {/* отступ от кнопки */}
   outline: 0;
   border: 0;
@@ -73,6 +74,7 @@ const Bar = styled.span`
   @media (max-width: 1000px) {
 
   display: block;
+  //float:right;
   width: 40px;
   height: 5px;
   margin-bottom: 7px;
