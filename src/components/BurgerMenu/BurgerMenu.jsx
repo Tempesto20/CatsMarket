@@ -5,7 +5,7 @@ import MainMenu from './MainMenu';
 function BurgerMenu() {
   return (
     <div>
-            <NavState>
+    <NavState>
       <MainMenu />
     </NavState>
     </div>

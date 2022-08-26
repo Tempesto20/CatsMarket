@@ -16,7 +16,7 @@ function Bottom() {
                     </div>
                     <div className="bottom__button">
                         <div className="button__batton">
-                            <a href="#" className="bottom__button-text" id="bottom__button-text">
+                            <a href="#!" className="bottom__button-text" id="bottom__button-text">
                                 Подписаться
                             </a>
                         </div>
