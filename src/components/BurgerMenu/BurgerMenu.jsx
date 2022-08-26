@@ -1,5 +1,5 @@
 import React from 'react';
-import NavState from '../context/navState';
+import NavState from '../../context/navState';
 import MainMenu from './MainMenu';
 
 function BurgerMenu() {

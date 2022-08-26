@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from 'react';
 import styled from 'styled-components';
-import useOnClickOutside from '../hooks/onClickOutside';
-import { MenuContext } from '../context/navState';
+import useOnClickOutside from '../../hooks/onClickOutside';
+import { MenuContext } from '../../context/navState';
 import HamburgerButton from './HamburgerButton';
 import { SideMenu } from './SideMenu';
 

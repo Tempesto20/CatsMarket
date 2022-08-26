@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
-import { MenuContext } from '../context/navState';
+import { MenuContext } from '../../context/navState';
 
 //выскакивающее меню 
 
 const Menu = styled.nav`
   
 {/* выскакивающее меню */}
-
+overflow: auto;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -43,7 +43,7 @@ const Menu = styled.nav`
 export const MenuLink = styled.a`
 
 {/* контент выскакивающего меню */}
-
+overflow: auto;
   position: relative;
   display: block;
   text-align: left;

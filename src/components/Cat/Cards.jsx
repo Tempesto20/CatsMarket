@@ -24,14 +24,14 @@ const cardDiscountNone = <div></div>
 
 const catBuy=  
 <div className="buy__cat" >
-  <a href="#" class="byu__cat-1">
+  <a href="#" className="byu__cat-1">
     {props.buy}
   </a>
 </div>;
 
 const catSold =
 <div className="buy__cat sold" >
-<a href="#" class="byu__cat-1">
+<a href="#" className="byu__cat-1">
   {props.buy}
 </a>
 </div>;
@@ -50,14 +50,14 @@ const catSold =
 
             {props.discount !== 0 ? (cardDiscount):(cardDiscountNone) }
 
-              <div class="card__like" >
+              <div className="card__like" >
 				        <img src={like} onClick={chengeLikeHamdler}/>
 				      </div>
           <div className="card__background">
             <h2 className="card__title">Кот полосатый</h2>
             <div className="card__cat-row">
 
-              <img src={line} alt="" class="line"></img>
+              <img src={line} alt="" className="line"></img>
 
               <p className="color__cat">
                 Коричневый 

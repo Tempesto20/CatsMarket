@@ -31,7 +31,7 @@ function Bottom() {
                 </h3>
                 <div className="bottom__input">
                     <label className="bottom__subscribe">
-                        <input type="checkbox" checked="checked" className="input__bottom"></input>
+                        <input type="checkbox"  className="input__bottom"></input>{/*checked="checked"*/}
                         <span className="checkmark"></span>
                     </label>
                 </div>

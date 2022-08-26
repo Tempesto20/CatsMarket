@@ -12,13 +12,14 @@ const amountHendler =(event)=>{
   return (
     <div className="">
         <select
-            tabindex="10"
+            tabIndex="10"
             name="price"
             className="price__cat-1"
             value={props.amount}
             onChange={amountHendler} 
+            
             >
-            <option selected>Цена</option>
+            <option defaultValue>Цена</option>
             <option value="more" className="cat__expensive" >
                 Дороже
             </option>
@@ -26,8 +27,8 @@ const amountHendler =(event)=>{
                 Дешевле
             </option>
             </select>
-            <select tabindex="10" name="color" className="age__cat">
-            <option selected value="age">
+            <select tabIndex="10" name="color" className="age__cat"  >
+            <option defaultValue value="age">
                 Возраст
             </option>
             <option value="red" className="cat__young">
