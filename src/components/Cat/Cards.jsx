@@ -12,7 +12,6 @@ function Cards(props) {
 
   const chengeLikeHamdler = ()=>{
     setLike(like2);
-
   }
 
 const cardDiscount = 
@@ -45,7 +44,7 @@ const catSold =
         <div className="card">
           
           <div className="card__img" alt="">       
-            <img src={props.img} alt="" />
+            <img src={props.img} alt=""  className="card__cat-img"/>
           </div>
 
             {props.discount !== 0 ? (cardDiscount):(cardDiscountNone) }

@@ -20,11 +20,14 @@
     @media (max-width: $lg) {
         margin:  0px 10px 27px 20px;
     }
+    @media (max-width: $sm) {
+        margin:  0px 10px 27px 20px;
+    }
 }
 .card__img{
     position: relative;
 }
-.card__cat-30000 {
+.card__cat-img {
     @media (max-width: $xl) {
         width: 300px;
     }
