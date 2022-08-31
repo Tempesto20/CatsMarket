@@ -9,9 +9,10 @@ function Button() {
     setIsFormVisible(true);
   }
 
-  const cancelCostHandler =()=>{
+{/*  const cancelCostHandler =()=>{
     setIsFormVisible(false);
   }
+*/}
 
 
   return (
