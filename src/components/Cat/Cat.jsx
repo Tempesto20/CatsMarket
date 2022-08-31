@@ -10,6 +10,8 @@ import thirtyOne from '../../img/30000-1.jpg';
 import fourty from '../../img/40000.jpg';
 import like from '../../img/svg/like.svg';
 import SelectCat from './SelectCat';
+import Button from '../Button/Button';
+
 
 let cats = [
 	{
@@ -85,22 +87,23 @@ function Cat(props) {
 		
 	return (
     <div className="content__cat ">
-    <div className="background__cat ">
-      <div className="head__cat section-container">
-        <h2 className="sorting__cat">Сортировать по:</h2>
-        <SelectCat
-			cats ={cats}
-			amount={amountPrice}
-			onChangeAmount ={amountChangeHandler}
-		/>
-      </div>
+		<div className="background__cat ">
+			<div className="head__cat section-container">
+				<h2 className="sorting__cat">Сортировать по:</h2>
+					<SelectCat
+						cats ={cats}
+						amount={amountPrice}
+						onChangeAmount ={amountChangeHandler}
+						/>
+			</div>
 
-	  <div className="max_cat">
-    <Card
-    	cats ={cats}
-    />
-        </div>
-    </div>
+			<div className="max_cat">
+				<Card
+					cats ={cats}
+				/>
+			</div>
+			<Button />
+		</div>
     </div>
   );
 }

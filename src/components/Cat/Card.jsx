@@ -62,6 +62,7 @@ function Card(props) {
             isSell={props.cats[5].isSell}
         />
 
+
     </div>
   );
 }
