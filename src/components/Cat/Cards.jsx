@@ -7,13 +7,27 @@ import like2 from '../../img/svg/like2.svg';
 
 
 function Cards(props) {
- 
+ {/*
   const [like, setLike] = useState(props.like);
 
   const chengeLikeHamdler = ()=>{
     setLike(like2);
         
   }
+
+*/}
+
+  const [like, setLike] = useState(false);
+
+
+  const chengeLikeHamdlerYes = ()=>{
+    setLike(true);  
+  }
+
+  const chengeLikeHamdlerNo = ()=>{
+    setLike(false);
+  }
+
 
 const cardDiscount = 
 <div className="card__discount" >
@@ -51,8 +65,12 @@ const catSold =
             {props.discount !== 0 ? (cardDiscount):(cardDiscountNone) }
 
               <div className="card__like" >
-				        <img src={like} onClick={chengeLikeHamdler} alt=""/>
-				      </div>
+
+                {!like && <img src={props.like} onClick={chengeLikeHamdlerYes} alt=""/> }
+                {like && <img src={like2} onClick={chengeLikeHamdlerNo} alt=""/> }  
+      
+            </div>
+            
           <div className="card__background">
             <h2 className="card__title">Кот полосатый</h2>
             <div className="card__cat-row">
