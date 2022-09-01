@@ -1,19 +1,20 @@
 //import React,{useState} from 'react';
 import '../../scss/components/bottom.scss';
 import { Formik } from 'formik';
+//import styled, { css } from 'styled-components';
 
 function Bottom() {
 
 
   return (
-    <div className="botton__content" id="news">
+    <div className="botton__content">
         
     <div className="bottom__conteiner section-container">
         <div className="bottom__background">
             <div className="bottom__row">
                 <h2 className="bottom__title">Успей купить!</h2>
                             <Formik
-                                    initialValues={{ email: '', password: '' }}
+                                    initialValues={{ email: '' }}
                                     validate={values => {
                                         const errors = {};
                                         if (!values.email) {
@@ -22,14 +23,15 @@ function Bottom() {
                                         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                                         ) {
                                         errors.email = 'Invalid email address';
+                                        
                                         }
                                         return errors;
                                     }}
                                     onSubmit={(values, { setSubmitting }) => {
                                         setTimeout(() => {
-                                        alert(JSON.stringify(values, null, 2));
+                                        console.log(JSON.stringify(values, null, 2));
                                         setSubmitting(false);
-                                        }, 400);
+                                        });
                                     }}
                                 >
                                     {({
@@ -44,19 +46,15 @@ function Bottom() {
                                     }) => (
                                 <form onSubmit={handleSubmit} className="bottom_link">
                                     <div className="bottom__email">
-                                        <div id="bottom__email-1">
-                                                <input
-                                                    type="email"
-                                                    name="email"
-                                                    id="bottom__email-2" placeholder="Ваш e-mail" class="contacts-input"
-                                                    onChange={handleChange}
-                                                    onBlur={handleBlur}
-                                                    value={values.email}
-                                                />
-                                            </div>
+                                            <input
+                                                type="email"
+                                                name="email"
+                                                placeholder="Ваш e-mail" className="contacts-input bottom__email-2" 
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                                value={values.email}
+                                            />     
                                         </div>
-
-                                    {errors.email && touched.email && errors.email}
                                     
                                     <div className="bottom__button">
                                         <div className="button__batton">
@@ -65,7 +63,7 @@ function Bottom() {
                                             </button>
                                         </div>
                                     </div>
-
+                                    {errors.email && touched.email && errors.email}
                                 </form>
                             )}
                             </Formik>

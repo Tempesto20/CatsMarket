@@ -67,6 +67,61 @@ let cats = [
 		like: like,
 		isSell: true,
 		isFavorite: false
+	},
+
+	{
+		price: 30000,
+		img: thirty,
+		discount: 40,
+		buy: 'Купить',
+		like: like,
+		isSell: false,
+		isFavorite: false
+	},
+	{
+		price: 40000,
+		img: fourty ,
+		discount: 0,
+		buy: 'Продан',
+		like: like,
+		isSell: true,
+		isFavorite: true
+	},
+	{
+		price: 20000,
+		img: twenty,
+		discount: 0,
+		buy: 'Купить',
+		like: like,
+		isSell: false,
+		isFavorite: false
+	},
+	{
+		price: 25000,
+		img: twentyFive,
+		discount: 0,
+		buy: 'Купить',
+		like: like,
+		isSell: false,
+		isFavorite: false
+	},
+	{
+		price: 30000,
+		img: thirtyOne,
+		discount: 40,
+		buy: 'Купить',
+		like: like,
+		isSell: false,
+		isFavorite: false
+	},
+	{
+		price: 10000,
+		img: ten,
+		discount: 0,
+		buy: 'Продан',
+		like: like,
+		isSell: true,
+		isFavorite: false
 	}
 ];
 function Cat(props) {
@@ -102,7 +157,9 @@ function Cat(props) {
 					cats ={cats}
 				/>
 			</div>
-			<Button />
+			<div className="max_cat">
+			<Button cats ={cats}/>
+			</div>
 		</div>
     </div>
   );

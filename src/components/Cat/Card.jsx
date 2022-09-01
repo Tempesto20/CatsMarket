@@ -3,8 +3,13 @@ import Cards from './Cards';
 
 
 function Card(props) {
+{/* 
+    const[isFormVisible,setIsFormVisible] = useState(false);
 
- 
+    const inputCostDataHandler =()=>{
+      setIsFormVisible(true);
+    }
+*/}
 
   return (
     <div className="">
