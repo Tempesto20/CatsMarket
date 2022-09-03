@@ -3,8 +3,9 @@ import '../../scss/components/bottom.scss';
 import { Formik } from 'formik';
 //import styled, { css } from 'styled-components';
 
-function Bottom() {
 
+function Bottom() {
+    
 
   return (
     <div className="botton__content">
@@ -19,6 +20,7 @@ function Bottom() {
                                         const errors = {};
                                         if (!values.email) {
                                         errors.email = 'Required';
+                                        
                                         } else if (
                                         !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
                                         ) {
@@ -26,12 +28,13 @@ function Bottom() {
                                         
                                         }
                                         return errors;
+                                        
                                     }}
                                     onSubmit={(values, { setSubmitting }) => {
-                                        setTimeout(() => {
-                                        console.log(JSON.stringify(values, null, 2));
+                                        
+                                       console.log(JSON.stringify(values, null, 2));
                                         setSubmitting(false);
-                                        });
+                                        
                                     }}
                                 >
                                     {({
@@ -45,7 +48,7 @@ function Bottom() {
                                         /* and other goodies */
                                     }) => (
                                 <form onSubmit={handleSubmit} className="bottom_link">
-                                    <div className="bottom__email">
+                                    <div className="bottom__email" >
                                             <input
                                                 type="email"
                                                 name="email"
@@ -53,12 +56,14 @@ function Bottom() {
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                                 value={values.email}
-                                            />     
+
+                                            />  
+                                             {/*style={{background: !isInputBackground ? ('red') : ('green')}}*/}   
                                         </div>
                                     
                                     <div className="bottom__button">
                                         <div className="button__batton">
-                                            <button type="submit" disabled={isSubmitting} className="bottom__button-text btn">
+                                            <button type="submit" disabled={isSubmitting} className="bottom__button-text btn" >
                                                 Подписаться
                                             </button>
                                         </div>

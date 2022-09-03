@@ -2,7 +2,7 @@ import React from 'react';
 
 import logoSvg from '../../img/svg/logo.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
-
+import '../../scss/components/header.scss';
 
 
 

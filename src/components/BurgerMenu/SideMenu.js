@@ -2,7 +2,9 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MenuContext } from '../../context/navState';
+import logoSvg from '../../img/svg/logo.svg';
 
+import '../../scss/components/header.scss';
 //выскакивающее меню 
 
 const Menu = styled.nav`
@@ -82,6 +84,7 @@ SideMenu.propTypes = {
 SideMenu.defaultProps = {
   children: (
     <>
+      <MenuLink href="/" ><img src={logoSvg} alt="" className="header__logo-1" /></MenuLink>
       <MenuLink href="/">Main</MenuLink>
       <MenuLink href="/articles">Gallery</MenuLink>
       <MenuLink href="/about">News</MenuLink>
