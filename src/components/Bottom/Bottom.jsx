@@ -31,8 +31,8 @@ function Bottom() {
                                         
                                     }}
                                     onSubmit={(values, { setSubmitting }) => {
-                                        
-                                       console.log(JSON.stringify(values, null, 2));
+                                        console.log(JSON);
+                                       //console.log(JSON.stringify(values, null, 2));
                                         setSubmitting(false);
                                         
                                     }}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import '../../scss/components/selectCat.scss';
 
 function SelectCat(props) {
@@ -10,7 +10,7 @@ const amountHendler =(event)=>{
 }
 
   return (
-    <div className="">
+    <Fragment>
         <select
             tabIndex="10"
             name="price"
@@ -38,7 +38,7 @@ const amountHendler =(event)=>{
                 Взрослые
             </option>
             </select>
-        </div>
+        </Fragment>
   );
 }
 

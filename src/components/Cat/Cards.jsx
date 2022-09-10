@@ -7,15 +7,6 @@ import like2 from '../../img/svg/like2.svg';
 
 
 function Cards(props) {
- {/*
-  const [like, setLike] = useState(props.like);
-
-  const chengeLikeHamdler = ()=>{
-    setLike(like2);
-        
-  }
-
-*/}
 
   const [like, setLike] = useState(false);
 

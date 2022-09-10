@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import NavState from '../../context/navState';
 import MainMenu from './MainMenu';
 
 function BurgerMenu() {
   return (
-    <div>
+    <Fragment>
     <NavState>
       <MainMenu />
     </NavState>
-    </div>
+    </Fragment>
   )
 }
 

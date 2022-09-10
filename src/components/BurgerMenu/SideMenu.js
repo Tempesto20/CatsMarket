@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MenuContext } from '../../context/navState';
@@ -83,12 +83,12 @@ SideMenu.propTypes = {
 
 SideMenu.defaultProps = {
   children: (
-    <>
+    <Fragment>
       <MenuLink href="/" ><img src={logoSvg} alt="" className="header__logo-1" /></MenuLink>
       <MenuLink href="/">Main</MenuLink>
       <MenuLink href="/articles">Gallery</MenuLink>
       <MenuLink href="/about">News</MenuLink>
       <MenuLink href="https://tempesto20.github.io/Summary.github.io-/" target="_blanc">Profile</MenuLink>
-    </>
+    </Fragment>
   ),
 };

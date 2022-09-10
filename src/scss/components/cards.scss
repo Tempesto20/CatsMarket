@@ -1,4 +1,4 @@
-@import '../config';
+@import './config';
 
 .cards__cat {
     display: inline-flex;
@@ -28,6 +28,7 @@
     position: relative;
 }
 .card__cat-img {
+    margin-bottom: 0px;
     @media (max-width: $xl) {
         width: 300px;
     }
@@ -102,6 +103,7 @@
     color: #000000;
     white-space: nowrap;
     padding: 29px 0px 22px 29px;
+    margin-top: 0px;
     @media (max-width: $xl) {
         padding: 20px 0px 16px 10px;
     }
