@@ -1,20 +1,31 @@
-import React, {Fragment} from 'react';
+import React, {useState, Fragment} from 'react';
 import Header from './components/Header/Header';
-import Cat from './components/Cat/Cat';
-import Bottom from './components/Bottom/Bottom';
-
-
+import Cat from './components/Cat/labaki/Cat';
+import Cart from './components/Cart/Cart';
+import CartContextProvider from './context/CartContextProvider';
 
 
 function App() {
 
+  const [cartIsVisible, setCartIsVisible] = useState(false);
+
+  const showCartHandler =()=>{
+    setCartIsVisible(true);
+  }
+
+const hideCartHandler =()=>{
+  setCartIsVisible(false);
+}
+
   return (
-    
+    <CartContextProvider>
     <Fragment>
+    {cartIsVisible && <Cart onHideCart={hideCartHandler}  /> }
     <Header />
-    <Cat />
-    <Bottom />  
+    <Cat onShowCart={showCartHandler}/>
+
     </Fragment>
+    </CartContextProvider>
     
   );
 }

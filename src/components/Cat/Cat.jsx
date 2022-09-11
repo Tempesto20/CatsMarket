@@ -69,6 +69,8 @@ let cats = [
 		isFavorite: false
 	},
 
+
+	/*
 	{
 		price: 30000,
 		img: thirty,
@@ -123,6 +125,7 @@ let cats = [
 		isSell: true,
 		isFavorite: false
 	}
+	*/
 ];
 function Cat(props) {
 	

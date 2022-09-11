@@ -8,12 +8,13 @@ import '../../scss/components/header.scss';
 
 
 
-function Header() {
+function Header(props) {
     return (
         <header className="header">
             <div className="header__background">
                 <div className="header__rgda">
-                    <div className="header_maxWidth">
+                    <div className="header_max">
+                        
                         <div className="header__container section-container">
                          
                             <BurgerMenu />
@@ -49,12 +50,14 @@ function Header() {
                                 </div>
                             </div>
                         </div>
+                        
                         <div className="header__block">
                             <div className="header__search">
                                 <div className="header__found">
                                     <p>Найдено 349 котов</p>
                                 </div>
                             </div>
+                            
                         </div>                  
                     </div>
                 </div>

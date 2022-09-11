@@ -26,6 +26,8 @@ overflow: auto;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 0px;
+
+  padding-bottom:100% ;
   
   //align-items: stretch;
   //background-color: #001698;
