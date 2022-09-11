@@ -13,7 +13,7 @@ function HeaderCartButton(props) {
 
     const cartItemsNumber = cartContexn.items.reduce( (currentValue, item)=>{
         return(
-            currentValue + item.amount
+            currentValue + item.price
         );
     },   0  );   
 

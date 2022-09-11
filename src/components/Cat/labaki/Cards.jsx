@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import line from '../../../img/svg/line.svg';
 
 import  './cards.scss';
 
 import like2 from '../../../img/svg/like2.svg';
-
+import CartContexn from '../../../context/cart-context';
 
 function Cards(props) {
 
@@ -19,7 +19,7 @@ function Cards(props) {
     setLike(false);
   }
 
-
+/*
 const clickHandler =()=>{
 const LOL = {
   id: props.id,
@@ -32,6 +32,21 @@ const LOL = {
 //console.log(LOL.price);
 props.onAddToCart(LOL);
 }
+*/
+const cartContexn = useContext(CartContexn); 
+
+const clickHandler =(amount)=>{
+  cartContexn.addItem({
+    id: props.id,
+    name: props.name,
+    img: props.img,
+    amount: amount,
+    price: props.price
+  });  
+
+  }
+
+
 
 
 const cardDiscount = 

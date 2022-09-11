@@ -1,4 +1,4 @@
-import React,{useState, useContext } from 'react';
+import React,{useState } from 'react';
 import './cat.scss';
 import ten from '../../../img/10000.jpg';
 import twenty from '../../../img/20000.jpg';
@@ -12,13 +12,12 @@ import Cards from './Cards';
 import HeaderCartButton from '../../Cart/HeaderCartButton';
 //import Button from '../../Button/Button';
 
-import CartContexn from '../../../context/cart-context';
+//import CartContexn from '../../../context/cart-context';
 
 
 let CATS_BLOCK = [
 	{
 		id: 1,
-		amount: 1,
 		price: 30000,
 		img: thirty,
 		discount: 40,
@@ -30,7 +29,6 @@ let CATS_BLOCK = [
 	},
 	{
 		id: 2,
-		amount: 1,
 		price: 40000,
 		img: fourty ,
 		discount: 0,
@@ -42,7 +40,6 @@ let CATS_BLOCK = [
 	},
 	{
 		id: 3,
-		amount: 1,
 		price: 20000,
 		img: twenty,
 		discount: 0,
@@ -54,7 +51,6 @@ let CATS_BLOCK = [
 	},
 	{
 		id: 4,
-		amount: 1,
 		price: 25000,
 		img: twentyFive,
 		discount: 0,
@@ -66,7 +62,6 @@ let CATS_BLOCK = [
 	},
 	{
 		id: 5,
-		amount: 1,
 		price: 30000,
 		img: thirtyOne,
 		discount: 40,
@@ -78,7 +73,6 @@ let CATS_BLOCK = [
 	},
 	{
 		id: 6,
-		amount: 1,
 		price: 10000,
 		img: ten,
 		discount: 0,
@@ -91,7 +85,9 @@ let CATS_BLOCK = [
 ];
 function Cat(props) {
 
-	const cartContexn = useContext(CartContexn); 
+
+/*
+const cartContexn = useContext(CartContexn); 
 
 
     const onAddToCartHandler =(amount)=>{
@@ -108,11 +104,13 @@ function Cat(props) {
 console.log(cartContexn);
 //console.log(cartContexn.items.amount.price);
 
+
+onAddToCart={onAddToCartHandler}
+*/
     const catList = CATS_BLOCK.map(cat => (
 		<Cards 
 		  key={cat.id} 
 		  id={cat.id}
-		  amount={cat.amount}
 		  img ={cat.img}
 		  discount={cat.discount}
 		  name={cat.name}
@@ -120,7 +118,7 @@ console.log(cartContexn);
 		  buy={cat.buy}
 		  like={cat.like}
 		  isSell={cat.isSell}
-		  onAddToCart={onAddToCartHandler}
+		  
 		/>
 	  ));
 

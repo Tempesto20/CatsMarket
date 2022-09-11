@@ -8,8 +8,14 @@ function Cart(props) {
 // Данные внутри корзины 
     const cartContexn = useContext(CartContexn); 
 
-    const totalAmount = cartContexn.totalAmount; 
+    //const totalAmount = cartContexn.totalAmount; 
   
+    const totalAmount = cartContexn.items.reduce( (currentValue, item)=>{
+      return(
+          currentValue + item.price
+      );
+  },   0  );  
+
     console.log(cartContexn);
 
     const hasItems = cartContexn.items.length > 0 ; //Отображает кнопку, только тогда, когда имеются заказы
@@ -31,14 +37,14 @@ function Cart(props) {
                 img={item.img}
                 name={item.name}
                 price={item.price}
-                amount={item.amount}
+
                 onRemove={removeCartItemHandler.bind(null, item)}
                 onAdd={addCartItemHandler.bind(null, item.id)}
-                
                 />
                 ))}      
             </ul>
     );
+    //  amount={item.amount}
 
   return (
     <Modal onHideCart={props.onHideCart}>{/* onHideCart={props.onHideCart}*/}
