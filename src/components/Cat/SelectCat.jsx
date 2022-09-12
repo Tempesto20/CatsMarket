@@ -10,14 +10,16 @@ const amountHendler =(event)=>{
 }
 
   return (
-    <Fragment>
+    
+        <Fragment>
+		<h2 className="sorting__cat">Сортировать по:</h2>
+        
         <select
             tabIndex="10"
             name="price"
             className="price__cat-1"
             value={props.amount}
-            onChange={amountHendler} 
-            
+            onChange={amountHendler}           
             >
             <option defaultValue>Цена</option>
             <option value="more" className="cat__expensive" >
@@ -38,7 +40,7 @@ const amountHendler =(event)=>{
                 Взрослые
             </option>
             </select>
-        </Fragment>
+            </Fragment>
   );
 }
 

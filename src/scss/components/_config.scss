@@ -4,22 +4,3 @@ $md: 768px;
 $sm: 576px;
 $ssm: 437px;
 
-
-.section-container {
-    width: 100%;
-    margin: 0 auto;
-  
-  
-    @media (max-width: $xl) {
-      max-width: 970px;
-    }
-  
-    @media (max-width: $lg) {
-      max-width: 750px;
-    }
-  
-    @media (max-width: $md) {
-      max-width: none;
-      padding: 0 10px;
-    }
-  }

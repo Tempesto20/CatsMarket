@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
 import line from '../../img/svg/line.svg';
-
 import  '../../scss/components/cards.scss';
-
 import like2 from '../../img/svg/like2.svg';
-
+import CartContexn from '../../context/cart-context';
 
 function Cards(props) {
 
   const [like, setLike] = useState(false);
 
-
+  
   const chengeLikeHamdlerYes = ()=>{
     setLike(true);  
   }
@@ -19,6 +17,44 @@ function Cards(props) {
     setLike(false);
   }
 
+const cartContexn = useContext(CartContexn); 
+
+const clickHandler =(amount)=>{
+  const notMoreOne =  cartContexn;
+  //const notMoreOne = notMoreOne.items.length;
+  //console.log(notMoreOne.items.length);
+  //console.log(notMoreOne.items.length.id);
+  /*
+  const abjArr = Object.entries(notMoreOne);
+  abjArr.forEach(([key, value]) => {
+      console.table(key, value);
+  });
+*/
+//Object.entries(notMoreOne);
+//Object.keys(notMoreOne);
+//console.log(notMoreOne);
+for(let i=0; i<notMoreOne.items.length;i++ ){
+  //console.log(notMoreOne.items[i].id);
+ // alligator.includes("thick scales"); // returns true
+  if(notMoreOne.items[i].id !== props.id){
+    //console.log('yyy');
+    //Ограничил добавление по id через контекст
+  }else{
+    return
+  }
+}
+ 
+  cartContexn.addItem({
+    id: props.id,
+    name: props.name,
+    img: props.img,
+    amount: amount,
+    price: props.price
+  });  
+
+  }
+
+ 
 
 const cardDiscount = 
 <div className="card__discount" >
@@ -29,14 +65,14 @@ const cardDiscountNone = <div></div>
 
 const catBuy=  
 <div className="buy__cat" >
-  <a href="#!" className="byu__cat-1">
+  <a href="#!" className="byu__cat-1 " onClick={clickHandler} >
     {props.buy}
   </a>
 </div>;
 
 const catSold =
 <div className="buy__cat sold" >
-<a href="#!" className="byu__cat-1">
+<a href="#!" className="byu__cat-1 ">
   {props.buy}
 </a>
 </div>;
@@ -45,8 +81,8 @@ const catSold =
 
 
   return (
-
-      <div className="cards__cat">
+<React.Fragment>      
+  <div className="cards__cat">
         <div className="card">
           
           <div className="card__img" alt="">       
@@ -63,7 +99,7 @@ const catSold =
             </div>
             
           <div className="card__background">
-            <h2 className="card__title">Кот полосатый</h2>
+            <h2 className="card__title">{props.name}</h2>
             <div className="card__cat-row">
 
               <img src={line} alt="" className="line"></img>
@@ -92,6 +128,8 @@ const catSold =
         
         </div>
       </div>
+      </React.Fragment>
+
 
   );
 }

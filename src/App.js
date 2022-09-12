@@ -1,8 +1,9 @@
-import React, {useState, Fragment} from 'react';
+import React, {useState} from 'react';
 import Header from './components/Header/Header';
-import Cat from './components/Cat/labaki/Cat';
+import Cat from './components/Cat/Cat';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './context/CartContextProvider';
+//import Bottom from './components/Bottom/Bottom';
 
 
 function App() {
@@ -19,12 +20,10 @@ const hideCartHandler =()=>{
 
   return (
     <CartContextProvider>
-    <Fragment>
     {cartIsVisible && <Cart onHideCart={hideCartHandler}  /> }
     <Header />
     <Cat onShowCart={showCartHandler}/>
-
-    </Fragment>
+   
     </CartContextProvider>
     
   );
