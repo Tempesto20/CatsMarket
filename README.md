@@ -1,3 +1,12 @@
+Used libraries
+
+npm i node-sass
+npm install --save styled-components
+npm install bootstrap --save
+npm install formik --save
+npm install yup --save
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
