@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+//import React,{useState} from 'react';
 import { Formik } from 'formik'
 import * as yup from 'yup'
 //import './App.scss'
@@ -6,14 +6,14 @@ import '../../scss/components/bottom.scss';
 
 
 function Proba() {
-const[visible,setVisible]=useState();
+//const[visible,setVisible]=useState();
 
-const red = <div className="b_red">You Pidor</div>
+//const red = <div className="b_red">You Pidor</div>
   const validationsSchema = yup.object().shape({
 
-    email: yup.string().email(red).required('Обязательно')
+    email: yup.string().email('need mail').required('Обязательно')
   })
-  setVisible(red);
+  //setVisible(red);
   return (
     <div>
       <Formik
@@ -57,5 +57,6 @@ const red = <div className="b_red">You Pidor</div>
     </div>
   );
 }
+
 
 export default Proba;

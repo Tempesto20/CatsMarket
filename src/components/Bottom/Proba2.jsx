@@ -1,67 +1,40 @@
-import React, { Component } from "react";
-//import styled from "styled-components";
-import { Formik } from "formik";
-import { Form, Input, Title, Text, Button, Label } from "./theme.js";
+import React from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
-
-
-
-class Proba2 extends Component {
+class Proba2 extends React.Component {
     render() {
-      return (
-        <div>
-          <Title>Form</Title>
-          {/* FORMIK */}
-          <Formik
-            initialValues={{ email: "", password: "" }}
-            validate={values => {
-              console.log(values);
-            }}
-            onSubmit={values => {
-              console.log(values);
-            }}
-            render={({
-              touched,
-              errors,
-              values,
-              handleChange,
-              handleBlur,
-              handleSubmit
-            }) => (
-              <Form onSubmit={handleSubmit}>
-                <Label>
-                  Email *
-                  {errors.email && <Text color="red">{errors.email}</Text>}
-                  <Input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.email}
-                    border={errors.email && "1px solid red"}
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                  />
-                </Label>
-                <Label>
-                  Password *
-                  {errors.password && <Text color="red">{errors.password}</Text>}
-                  <Input
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    value={values.password}
-                    border={errors.password && "1px solid red"}
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                  />
-                </Label>
-                <Button type="submit">Submit</Button>
-              </Form>
-            )}
-          />
-          {/* END OF FORMIK */}
-        </div>
-      );
+        return (
+            <Formik
+                initialValues={{
+                    email: '',
+                }}
+                validationSchema={Yup.object().shape({
+                   
+                    email: Yup.string()
+                        .email('Email is invalid')
+                        .required('Email is required'),
+                    
+                })}
+                onSubmit={values => {
+                  console.log(values)  
+                }}
+                render={({ errors, status, touched }) => (
+                    <Form>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            
+                            <Field name="email" type="text" className={'form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
+                            <ErrorMessage name="email" component="div" className="invalid-feedback" />
+                        </div>
+                        <div className="form-group">
+                            <button type="submit" className="btn btn-primary mr-2">Register</button>
+                        </div>
+                    </Form>
+                )}
+            />
+        )
     }
-  }
-export default Proba2;
+}
+
+export default Proba2 ;

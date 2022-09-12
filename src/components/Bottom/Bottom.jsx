@@ -1,14 +1,11 @@
-//import React,{useState} from 'react';
+import React from 'react';
 import '../../scss/components/bottom.scss';
-import { Formik } from 'formik';
-import * as yup from 'yup';
-//import styled, { css } from 'styled-components';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 
 
-function Bottom() {
-    const validationsSchema = yup.object().shape({
-        email: yup.string().email('Введите верный email').required('Обязательно')
-    });
+class Bottom extends React.Component{
+    render() {
 
   return (
     <div className="botton__content">
@@ -17,55 +14,50 @@ function Bottom() {
         <div className="bottom__background">
             <div className="bottom__row">
                 <h2 className="bottom__title">Успей купить!</h2>
-                    <Formik
-                        initialValues={{
-                        email: ''
-                        }}
+                    
+                    
+                <Formik
+                initialValues={{
+                    email: '',
+                }}
+                validationSchema={Yup.object().shape({
+                   
+                    email: Yup.string()
+                        .email('Email is invalid')
+                        .required('Email is required'),
+                    
+                })}
+                onSubmit={values => {
+                  console.log(values)  
+                }}
+                render={({ errors, status, touched }) => (
+                <Form>
+                    <div className="bottom_link">
+                        <div className="form-group bottom__email" >
 
-                        validateOnBlur
-                        onSubmit={(values) => { console.log(values) }}
-                        validationSchema={validationsSchema}
-                    >
-                    {({ values, errors, touched, 
-                    handleChange, handleBlur, isValid, 
-                    handleSubmit, dirty }) => (
-
-                                <div onSubmit={handleSubmit} className="bottom_link">
-                                    <div className="bottom__email" >
-                                            <input
-                                                className={'input contacts-input bottom__email-2'}
-                                                type={`email`}
-                                                name={`email`}
-                                                placeholder="Ваш e-mail"
-                                                onChange={handleChange}
-                                                onBlur={handleBlur}
-                                                value={values.email}
-                                            />  
+                            <label htmlFor="email">Email</label>
+                            <Field name="email" type="text" placeholder="Ваш e-mail" className={'bottom__email-2 form-control' + (errors.email && touched.email ? ' is-invalid' : '')} />
+                            <ErrorMessage name="email" component="div" className="invalid-feedback" /> 
                              
-                                        </div>
-                                        {touched.email && errors.email && <div className={'error'}>{errors.email}</div>}
+                        </div>
+                        
 
-                                    <div className="bottom__button">
-                                        <div className="button__batton">
-                                            <a
-                                                disabled={!isValid || !dirty}
-                                                onClick={handleSubmit}
-                                                type={`submit`}
-                                                className="bottom__button-text"
-                                                href='#!' 
-                                            >
+                            <div className="bottom__button">
+                                <div className="button__batton">
+
+                                    <button
+                                    type="submit" 
+                                    className="bottom__button-text btn "
+                                     >
                                                 Подписаться
-                                            </a>
-                                            {/*        
-                                            type="submit" 
-                                            disabled={!isValid || !dirty} 
-                                            onClick={handleSubmit}  
-                                            */}
-                                        </div>
-                                    </div>
+                                    </button>
+
                                 </div>
-                            )}
-                            </Formik>
+                            </div>
+                    </div>
+               </Form>
+                )}
+            />
 
             </div>
             <div className="bottom__row-1">
@@ -96,6 +88,7 @@ function Bottom() {
 
 
   );
+    }
 }
 
 export default Bottom;
