@@ -28,7 +28,7 @@ class Bottom extends React.Component{
                     
                 })}
                 onSubmit={values => {
-                  console.log(values)  
+                  //console.log(values)  
                 }}
                 render={({ errors, status, touched }) => (
                 <Form>
