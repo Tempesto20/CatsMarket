@@ -15,7 +15,7 @@ overflow: auto;
   top: 0px;
   left: 0px;
   //bottom: 0px;
-  z-index: 5;
+  z-index: 51;
   display: block;
   width: 100%;
   hight: 100%;
@@ -27,7 +27,7 @@ overflow: auto;
   padding-bottom: 100px;
   padding-right: 0px;
   padding_bottom:100%;
-  
+  margin_bottom:100%;
   background-color: black;
   transform: translateX(-100%);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);

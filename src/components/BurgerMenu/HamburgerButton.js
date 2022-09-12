@@ -15,7 +15,7 @@ const MenuButton = styled.button`
     right: 20px;
     top: 20px;
   position: absolute;
-  z-index: 10;
+  z-index: 52;
   display: block;
   transform-origin: 16px 11px; 
   //float:right;
