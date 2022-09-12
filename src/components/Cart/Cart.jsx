@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import CartContexn from '../../context/cart-context';
 import Modal from './Modal';
-import styles from './Cart.module.css';
+import styles from '../../scss/components/сart.module.scss';
 import CartItem from './CartItem';
 
 function Cart(props) {
@@ -16,7 +16,7 @@ function Cart(props) {
       );
   },   0  );  
 
-    console.log(cartContexn);
+    //console.log(cartContexn);
 
     const hasItems = cartContexn.items.length > 0 ; //Отображает кнопку, только тогда, когда имеются заказы
 

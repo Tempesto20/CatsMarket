@@ -1,3 +1,5 @@
+@import '../../scss/components/config';
+
 .button {
   cursor: pointer;
   font: inherit;
@@ -16,6 +18,17 @@
   position: absolute; /* Фиксированное положение */
   right: 50px; /* Расстояние от правого края окна браузера */
   //top: 20%;
+  @media (max-width: $xl) {
+    position: relative;
+    margin-left: 70px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+@media (max-width: $sm) {
+  padding: 0.5rem 1.5rem;
+  margin-left: 60px;
+  
+}
 }
 
 .button:hover,

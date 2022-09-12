@@ -5,7 +5,7 @@ import { Formik } from 'formik';
 
 
 function Bottom() {
-    
+
 
   return (
     <div className="botton__content">
@@ -31,7 +31,6 @@ function Bottom() {
                                         
                                     }}
                                     onSubmit={(values, { setSubmitting }) => {
-                                        console.log(JSON);
                                        //console.log(JSON.stringify(values, null, 2));
                                         setSubmitting(false);
                                         

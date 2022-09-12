@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Cat from './components/Cat/Cat';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './context/CartContextProvider';
-//import Bottom from './components/Bottom/Bottom';
+import Bottom from './components/Bottom/Bottom';
 
 
 function App() {
@@ -23,9 +23,8 @@ const hideCartHandler =()=>{
     {cartIsVisible && <Cart onHideCart={hideCartHandler}  /> }
     <Header />
     <Cat onShowCart={showCartHandler}/>
-   
+    <Bottom />
     </CartContextProvider>
-    
   );
 }
 

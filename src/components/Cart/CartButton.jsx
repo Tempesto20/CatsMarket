@@ -1,7 +1,7 @@
 import React,{useContext} from 'react';
 import CartContexn from '../../context/cart-context';
 import CartIcon from './CartIcon';
-import styles from './HeaderCartButton.module.scss';
+import styles from '../../scss/components/сartButton.module.scss';
 
 function HeaderCartButton(props) {
     

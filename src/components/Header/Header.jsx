@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logoSvg from '../../img/svg/logo.svg';
+import logoSvg from '../../assets/img/svg/logo.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import '../../scss/components/header.scss';
 
@@ -18,10 +18,6 @@ function Header(props) {
                         <div className="header__container section-container">
                          
                             <BurgerMenu />
-
-                            {/* <div className="js-header__burger header__burger">
-                                <span></span>
-                            </div>  */}  
 
                             <div className="header__logo">
                                 <img src={logoSvg} alt="" className="header__logo-1"></img>

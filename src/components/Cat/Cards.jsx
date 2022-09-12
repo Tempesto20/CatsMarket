@@ -1,7 +1,7 @@
 import React, {useState,useContext} from 'react';
-import line from '../../img/svg/line.svg';
+import line from '../../assets/img/svg/line.svg';
+import like2 from '../../assets/img/svg/like2.svg';
 import  '../../scss/components/cards.scss';
-import like2 from '../../img/svg/like2.svg';
 import CartContexn from '../../context/cart-context';
 
 function Cards(props) {

@@ -18,7 +18,7 @@
 }
 
 .header__background {
-  background: url(../../img/fon1.jpg);
+  background: url(../../assets/img/fon1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -189,13 +189,12 @@
 @media (max-width: $lg) {
   .header {
     width: 100%;
-    position: fixed;
+    position: absolute;
   }
 
   .header__nav {
     position: fixed;
     overflow: auto;
-
     top: -100%;
     left: 0;
     width: 100%;
@@ -228,7 +227,6 @@
   .header__nav-list {
     display: block;
   }
-
 
 
 }

@@ -1,6 +1,13 @@
 @import './config';
 
-
+.sort{
+    display: flex;
+    justify-content: row;
+    @media (max-width: $sm) {
+        display: flex;
+        flex-direction: column; 
+    }
+}
 .price__cat-1 {
     font-size: 18px;
     line-height: 22px;
@@ -11,7 +18,7 @@
         margin: 300px 84px 38px 0px;
     }
     @media (max-width: $md) {
-        max-width: 70px;
+        max-width: 100px;
         font-size: 16px;
         line-height: 18px;
         margin: 200px 42px 38px 0px;

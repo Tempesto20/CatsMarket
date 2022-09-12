@@ -15,12 +15,21 @@
 .head__cat {
     display: flex;
     flex-direction: row;    
-    @media (max-width: $sm) {
+    @media (max-width: $xl) {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
+    }
+    @media (max-width: $md) {
+       padding-top: 160px ;
     }
 }
 
+.SelectCart{
+    @media (max-width: $xl) {
+        display: block;
+        flex-direction: column;
+    }
+}
 
 
 .sorting__cat {

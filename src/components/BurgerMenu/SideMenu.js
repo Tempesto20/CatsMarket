@@ -2,7 +2,7 @@ import React, { useContext, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MenuContext } from '../../context/navState';
-import logoSvg from '../../img/svg/logo.svg';
+import logoSvg from '../../assets/img/svg/logo.svg';
 
 import '../../scss/components/header.scss';
 //выскакивающее меню 
@@ -26,13 +26,9 @@ overflow: auto;
   padding-top: 100px;
   padding-bottom: 100px;
   padding-right: 0px;
-
-  padding-bottom:100% ;
+  padding_bottom:100%;
   
-  //align-items: stretch;
-  //background-color: #001698;
   background-color: black;
-  //background: black;
   transform: translateX(-100%);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 

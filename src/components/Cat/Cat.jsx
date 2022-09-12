@@ -1,15 +1,15 @@
 import React,{useState } from 'react';
+import ten from '../../assets/img/10000.jpg';
+import twenty from '../../assets/img/20000.jpg';
+import twentyFive from '../../assets/img/25000.jpg';
+import thirty from '../../assets/img/30000.jpg';
+import thirtyOne from '../../assets/img/30000-1.jpg';
+import fourty from '../../assets/img/40000.jpg';
+import like from '../../assets/img/svg/like.svg';
 import '../../scss/components/cat.scss';
-import ten from '../../img/10000.jpg';
-import twenty from '../../img/20000.jpg';
-import twentyFive from '../../img/25000.jpg';
-import thirty from '../../img/30000.jpg';
-import thirtyOne from '../../img/30000-1.jpg';
-import fourty from '../../img/40000.jpg';
-import like from '../../img/svg/like.svg';
 import SelectCat from './SelectCat';
 import Cards from './Cards';
-import HeaderCartButton from '../Cart/HeaderCartButton';
+import CartButton from '../Cart/CartButton';
 //import Button from '../../Button/Button';
 
 //import CartContexn from '../../../context/cart-context';
@@ -143,6 +143,7 @@ onAddToCart={onAddToCartHandler}
     <div className="content__cat ">
 
 		<div className="head__cat">
+
 		<SelectCat 						
 			cats ={catsBlock}
 			amount={amountPrice}
@@ -150,7 +151,9 @@ onAddToCart={onAddToCartHandler}
 			/>
 			
 			<div className="cart">
-			<HeaderCartButton onClick={props.onShowCart}/>
+			<CartButton onClick={props.onShowCart}/>
+		
+
 			</div>
 
 		</div>
