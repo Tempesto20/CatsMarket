@@ -1,11 +1,14 @@
 //import React,{useState} from 'react';
 import '../../scss/components/bottom.scss';
 import { Formik } from 'formik';
+import * as yup from 'yup';
 //import styled, { css } from 'styled-components';
 
 
 function Bottom() {
-
+    const validationsSchema = yup.object().shape({
+        email: yup.string().email('Введите верный email').required('Обязательно')
+    });
 
   return (
     <div className="botton__content">
@@ -14,61 +17,53 @@ function Bottom() {
         <div className="bottom__background">
             <div className="bottom__row">
                 <h2 className="bottom__title">Успей купить!</h2>
-                            <Formik
-                                    initialValues={{ email: '' }}
-                                    validate={values => {
-                                        const errors = {};
-                                        if (!values.email) {
-                                        errors.email = 'Required';
-                                        
-                                        } else if (
-                                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                                        ) {
-                                        errors.email = 'Invalid email address';
-                                        
-                                        }
-                                        return errors;
-                                        
-                                    }}
-                                    onSubmit={(values, { setSubmitting }) => {
-                                       //console.log(JSON.stringify(values, null, 2));
-                                        setSubmitting(false);
-                                        
-                                    }}
-                                >
-                                    {({
-                                        values,
-                                        errors,
-                                        touched,
-                                        handleChange,
-                                        handleBlur,
-                                        handleSubmit,
-                                        isSubmitting,
-                                        /* and other goodies */
-                                    }) => (
-                                <form onSubmit={handleSubmit} className="bottom_link">
+                    <Formik
+                        initialValues={{
+                        email: ''
+                        }}
+
+                        validateOnBlur
+                        onSubmit={(values) => { console.log(values) }}
+                        validationSchema={validationsSchema}
+                    >
+                    {({ values, errors, touched, 
+                    handleChange, handleBlur, isValid, 
+                    handleSubmit, dirty }) => (
+
+                                <div onSubmit={handleSubmit} className="bottom_link">
                                     <div className="bottom__email" >
                                             <input
-                                                type="email"
-                                                name="email"
-                                                placeholder="Ваш e-mail" className="contacts-input bottom__email-2" 
+                                                className={'input contacts-input bottom__email-2'}
+                                                type={`email`}
+                                                name={`email`}
+                                                placeholder="Ваш e-mail"
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
                                                 value={values.email}
-
                                             />  
-                                             {/*style={{background: !isInputBackground ? ('red') : ('green')}}*/}   
+                             
                                         </div>
-                                    
+                                        {touched.email && errors.email && <div className={'error'}>{errors.email}</div>}
+
                                     <div className="bottom__button">
                                         <div className="button__batton">
-                                            <button type="submit" disabled={isSubmitting} className="bottom__button-text btn" >
+                                            <a
+                                                disabled={!isValid || !dirty}
+                                                onClick={handleSubmit}
+                                                type={`submit`}
+                                                className="bottom__button-text"
+                                                href='#!' 
+                                            >
                                                 Подписаться
-                                            </button>
+                                            </a>
+                                            {/*        
+                                            type="submit" 
+                                            disabled={!isValid || !dirty} 
+                                            onClick={handleSubmit}  
+                                            */}
                                         </div>
                                     </div>
-                                    {errors.email && touched.email && errors.email}
-                                </form>
+                                </div>
                             )}
                             </Formik>
 
