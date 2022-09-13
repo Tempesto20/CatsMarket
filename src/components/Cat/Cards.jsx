@@ -65,11 +65,11 @@ const cardDiscount =
 const cardDiscountNone = <div></div>
 
 const catBuy=  
-<div className="buy__cat" >
-  <a href="#!" className="byu__cat-1 " onClick={clickHandler} >
+<button className="buy__cat buy"  onClick={clickHandler}>
+  <p  className="byu__cat-1 " >
     {props.buy}
-  </a>
-</div>;
+  </p>
+</button>;
 
 const catSold =
 <div className="buy__cat sold" >

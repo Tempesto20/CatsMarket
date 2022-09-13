@@ -24,7 +24,7 @@ class Bottom extends React.Component{
                    
                     email: Yup.string()
                         .email('Email is invalid')
-                        .required('Email is required'),
+                        .required('Введите корректный Email'),
                     
                 })}
                 onSubmit={values => {
@@ -49,7 +49,7 @@ class Bottom extends React.Component{
                                     type="submit" 
                                     className="bottom__button-text but "
                                      >
-                                                Подписаться
+                                               <p className='button-text'> Подписаться</p>
                                     </button>
 
                                 </div>
