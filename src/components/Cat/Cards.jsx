@@ -47,6 +47,7 @@ for(let i=0; i<notMoreOne.items.length;i++ ){
   cartContexn.addItem({
     id: props.id,
     name: props.name,
+    age: props.age,
     img: props.img,
     amount: amount,
     price: props.price
@@ -110,7 +111,7 @@ const catSold =
                 окрас
               </p>
               <div className="cat_year">
-                <p className="years__cat">2 мес</p>
+                <p className="years__cat">{props.age}</p>
                 <p className="years__cat-1">Возраст</p>
               </div>
               <div className="cat__quantity">

@@ -22,6 +22,7 @@ let CATS_BLOCK = [
 		img: thirty,
 		discount: 40,
 		name: 'Эверетт',
+		age: 2,
 		buy: 'Купить',
 		like: like,
 		isSell: false,
@@ -33,6 +34,7 @@ let CATS_BLOCK = [
 		img: fourty ,
 		discount: 0,
 		name: 'Генри',
+		age: 3,
 		buy: 'Продан',
 		like: like,
 		isSell: true,
@@ -44,6 +46,7 @@ let CATS_BLOCK = [
 		img: twenty,
 		discount: 0,
 		name: 'Чарли',
+		age: 9,
 		buy: 'Купить',
 		like: like,
 		isSell: false,
@@ -55,6 +58,7 @@ let CATS_BLOCK = [
 		img: twentyFive,
 		discount: 0,
 		name: 'Эдвин',
+		age: 6,
 		buy: 'Купить',
 		like: like,
 		isSell: false,
@@ -66,6 +70,7 @@ let CATS_BLOCK = [
 		img: thirtyOne,
 		discount: 40,
 		name: 'Сэм',
+		age: 1,
 		buy: 'Купить',
 		like: like,
 		isSell: false,
@@ -77,6 +82,7 @@ let CATS_BLOCK = [
 		img: ten,
 		discount: 0,
 		name: 'Маршалл',
+		age: 8,
 		buy: 'Продан',
 		like: like,
 		isSell: true,
@@ -86,27 +92,6 @@ let CATS_BLOCK = [
 function Cat(props) {
 
 
-/*
-const cartContexn = useContext(CartContexn); 
-
-
-    const onAddToCartHandler =(amount)=>{
-		cartContexn.addItem({
-		  id: props.id,
-		  name: props.name,
-		  img: props.img,
-		  amount: amount,
-		  price: props.price
-		});  
-
-	  }
-
-console.log(cartContexn);
-//console.log(cartContexn.items.amount.price);
-
-
-onAddToCart={onAddToCartHandler}
-*/
     const catList = CATS_BLOCK.map(cat => (
 		<Cards 
 		  key={cat.id} 
@@ -114,6 +99,7 @@ onAddToCart={onAddToCartHandler}
 		  img ={cat.img}
 		  discount={cat.discount}
 		  name={cat.name}
+		  age={cat.age}
 		  price={cat.price}
 		  buy={cat.buy}
 		  like={cat.like}
@@ -127,14 +113,18 @@ onAddToCart={onAddToCartHandler}
 		const [amountPrice, setAmountPrice]=useState(CATS_BLOCK);
 
 		const amountChangeHandler =(amount)=>{
-			setAmountPrice(amount);
+			setAmountPrice(amount );
 			//console.log(amount);
 			if(amount === 'more'){
 			//	console.log('+');
 			CATS_BLOCK = CATS_BLOCK.sort((a, b) => b.price - a.price);
-			} else{
+			} else if(amount === 'less'){
 			//	console.log('-');
 			CATS_BLOCK = CATS_BLOCK.sort((a, b) => a.price - b.price);
+			}else if(amount === 'older'){
+			CATS_BLOCK = CATS_BLOCK.sort((a, b) => b.age - a.age);
+			} else if(amount === 'under'){
+				CATS_BLOCK = CATS_BLOCK.sort((a, b) => a.age - b.age);
 			}
 		}
 
@@ -147,6 +137,7 @@ onAddToCart={onAddToCartHandler}
 		<SelectCat 						
 			cats ={catsBlock}
 			amount={amountPrice}
+			
 			onChangeAmount ={amountChangeHandler}
 			/>
 			
