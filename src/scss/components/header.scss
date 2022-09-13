@@ -5,7 +5,11 @@
   margin: 0px 0px;
   position: relative;
   z-index: 50;
- // flex: 0 0 auto;
+/*
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;*/
+  
 }
 
 .header:before {
