@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from 'react-bootstrap/Form';
 import '../../scss/components/selectCat.scss';
 
 
@@ -12,15 +13,11 @@ const amountHendler =(event)=>{
 }
 
   return (
-    <div className="">
-
-
-
-        
         <div className="sort">
             <h2 className="sorting__cat">Сортировать по:</h2>
             
-            <select
+            <Form.Select 
+                aria-label="Default select example"
                 tabIndex="10"
                 name="price"
                 className="catSelect"
@@ -41,12 +38,9 @@ const amountHendler =(event)=>{
                     Взрослые
                 </option>
 
-            </select>
+            </Form.Select>
             
             </div>
-
-
-</div>
 );
 }
 

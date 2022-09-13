@@ -79,49 +79,15 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    color: white;
 }
 
-/*
-.bottom__button {
-    width: 250px;
-    height: 65px;
-    background: #6EBBD3;
-    padding: 16px 0px 0px 66px;
-
-    text-decoration: none;
-    border-radius: 15px;
-    margin: 83px 0px 0px 0px;
-    @media (max-width: $xl){
-        margin: 20px 0px 0px 0px;
-    }
-    @media (max-width: $md){
-        margin: 10px 0px 0px 40px;
-    } 
-    @media (max-width: $sm){
-        width: 200px;
-        padding: 22px 0px 22px 40px;    
-        margin: 10px 0px 0px 20px;
-    } 
-    a:hover{
-        color: black;
-    }   
-}
-//Tem
-.bottom__button-text {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-    text-decoration: none;
- 
-}
-*/
 
 .button__batton {
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
+    color: white;
    // color: #FFFFFF;
     
 }
@@ -131,16 +97,17 @@
     display: inline-block;
     cursor: pointer;
     outline: none;
+    color: white;
     border: 0;
     vertical-align: middle;
     text-decoration: none;
     font-size: inherit;
     font-family: inherit;
     //padding: 16px 0px 0px 66px;
-    margin: 68px 0px 0px 40px;
+    margin: 82px 0px 0px 40px;
 
     @media (max-width: $xl){
-        margin: 10px 0px 0px 40px;
+        margin: 20px 0px 0px 40px;
     }
     @media (max-width: $md){
         margin: 10px 0px 0px 10px;
@@ -150,7 +117,7 @@
         margin: 10px 0px 0px 10px;
     } 
   }
-  button.btn {
+  button.but {
     font-weight: 600;
     color: #382b22;
     text-transform: uppercase;
@@ -161,7 +128,7 @@
     transition: transform 0.15s;
     transform-style: preserve-3d;
   }
-  button.btn::before {
+  button.but::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -177,19 +144,19 @@
     transition: transform 0.15s, box-shadow 0.15s;
   }
   
-  button.btn:hover {
-    background: #5517ff;
+  button.but:hover {
+    background: #4bc9f0;
     transform: translate(0, 0.25em);
   }
-  button.btn:hover::before {
+  button.but:hover::before {
     box-shadow: 0 0 0 2px #2f00ff, 0 0.5em 0 0 #5517ff;
     transform: translate3d(0, 0.5em, -1em);
   }
-  button.btn:active {
+  button.but:active {
     background: #6EBBD3;
     transform: translate(0em, 0.75em);
   }
-  button.btn:active::before {
+  button.but:active::before {
     box-shadow: 0 0 0 2px #0024f1, 0 0 #5517ff;
     transform: translate3d(0, 0, -1em);
   }

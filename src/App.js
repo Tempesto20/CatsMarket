@@ -4,7 +4,7 @@ import Cat from './components/Cat/Cat';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './context/CartContextProvider';
 import Bottom from './components/Bottom/Bottom';
-//import Proba2 from './components/Bottom/Proba2';
+//import Proba from './components/Cat/Proba';
 
 function App() {
 

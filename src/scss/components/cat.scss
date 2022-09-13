@@ -33,29 +33,6 @@
 }
 
 
-.sorting__cat {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
-    margin: 38px 48px 38px 120px;
-    @media (max-width: $xl) {
-        margin: 38px 48px 38px 20px;
-    }
-    @media (max-width: $lg) {
-        margin: 300px 48px 38px 20px;
-    }
-    @media (max-width: $md) {
-        font-size: 16px;
-        line-height: 18px;
-        margin: 200px 24px 38px 20px;
-    }
-    @media (max-width: $sm) {
-        margin: 200px 0px 10px 20px;
-    }
-}
-
-
 .max_cat{
     max-width: 1280px;
     display: flex;

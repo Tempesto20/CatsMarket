@@ -47,7 +47,7 @@ class Bottom extends React.Component{
 
                                     <button
                                     type="submit" 
-                                    className="bottom__button-text btn "
+                                    className="bottom__button-text but "
                                      >
                                                 Подписаться
                                     </button>
