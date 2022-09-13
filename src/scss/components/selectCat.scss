@@ -3,6 +3,7 @@
 .sort{
     display: flex;
     justify-content: row;
+    background: #E5E5E5;
     @media (max-width: $sm) {
         display: flex;
         flex-direction: column; 
@@ -52,4 +53,7 @@
         max-width: 200px;
         margin: 0px 0px 10px 20px;
     }
+}
+.nice{
+    
 }

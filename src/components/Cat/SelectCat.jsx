@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import '../../scss/components/selectCat.scss';
 
 
-
 function SelectCat(props) {
 
 const amountHendler =(event)=>{
@@ -17,24 +16,25 @@ const amountHendler =(event)=>{
             <h2 className="sorting__cat">Сортировать по:</h2>
             
             <Form.Select 
-                aria-label="Default select example"
+                
                 tabIndex="10"
                 name="price"
                 className="catSelect"
-                onChange={amountHendler}           
+                onChange={amountHendler}  
+                style={{backgroundColor: '#E5E5E5'}}         
                 >
-                <option defaultValue value="defaultPrice">Рекомендованные</option>
-                <option value="more" className="cat__expensive" >
+                <option defaultValue value="defaultPrice" className="nice">Рекомендованные</option>
+                <option value="more" className="nice" >
                     Дороже
                 </option>
-                <option value="less" className="cheaper" >
+                <option value="less" className="nice" >
                     Дешевле
                 </option>
 
-                <option value="under" className="cat__young">
+                <option value="under" className="nice">
                     Юные
                 </option>
-                <option value="older" className="cat__adults">
+                <option value="older" className="nice">
                     Взрослые
                 </option>
 
