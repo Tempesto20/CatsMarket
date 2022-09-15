@@ -9,6 +9,17 @@ import '../../scss/components/header.scss';
 
 
 function Header(props) {
+/*
+    let lol =  props.onCatHeader;
+    console.log(lol);
+    lol =(headCat)=>{
+        //let kek = event;
+        console.log(headCat);
+    }
+*/
+    //console.log(props.onCatHeader);
+    
+
     return (
         <header className="header">
             <div className="header__background">

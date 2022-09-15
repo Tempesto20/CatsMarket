@@ -5,6 +5,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-color: #000000;
+    
+    margin: auto;
 }
 
 .card__cat {
@@ -209,14 +211,17 @@
         text-decoration: none;
         margin-left:100px;
         @media (max-width: $xl) {
-            margin-left: 60px;
+            margin-left: 70px;
+        }
+        @media (max-width: $lg) {
+            margin-left: 90px;
         }
         @media (max-width: $sm) {
             margin-left: 30px;
         }
     }
     a:hover{
-        color: black;
+        color: #6EBBD3;
     }   
 }
 
@@ -237,17 +242,6 @@
 
 .buy {
     position: relative;
-    //display: inline-block;
-    //cursor: pointer;
-    //outline: none;
-    //color: white;
-    //border: 0;
-    //vertical-align: middle;
-    //text-decoration: none;
-    //font-size: inherit;
-    //font-family: inherit;
-    //padding: 16px 0px 0px 66px;
-    //margin: 82px 0px 0px 40px;
     margin-top: 0px ;
     margin: auto;
     width: 380px;
@@ -261,6 +255,7 @@
         max-width: 250px; 
     } 
   }
+
   button.buy {
     font-weight: 600;
     color: #382b22;
@@ -308,79 +303,4 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card__cat-40000{
-    @media (max-width: $xl) {
-        width: 300px;
-    }
-    @media (max-width: $lg) {
-        width: 380px;
-    }
-    @media (max-width: $sm) {
-        width: 250px;
-    }
-}
-  
-.card__cat-20000{
-    @media (max-width: $xl) {
-        width: 300px;
-    }
-    @media (max-width: $lg) {
-        width: 380px;
-    }
-    @media (max-width: $sm) {
-        width: 250px;
-    }
-}
-
-.buy__cat-1 {
-    background: black;
-    padding: 22px 56px 22px 56px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    @media (max-width: $lg) {
-        max-width: 380px;
-    }
-    @media (max-width: $sm) {
-        width: 250px;
-    }
-    & a{
-        text-decoration: none;
-        margin-left: 100px;
-        @media (max-width: $xl) {
-            margin-left: 60px;
-        }
-        @media (max-width: $sm) {
-            margin-left: 30px;
-        }
-    }
-    a:hover{
-        color: #6EBBD3;
-    }
-}
-.byu__cat-2 {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    color: #FFFFFF;
-}
 

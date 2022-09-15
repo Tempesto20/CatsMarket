@@ -128,6 +128,17 @@ function Cat(props) {
 			}
 		}
 
+		//const CatL = catsBlock.length;
+		//props.onCatsLengthk(CatL);
+		//console.log(props.catL);
+		//props.catL=catsBlock.length;
+		//props.catL();
+
+		//props.onCat(catsBlock.length);
+		//let kek = props.lol;
+		////kek = catsBlock.length;
+		//console.log(kek);
+		//props.kek();
 
 	return (
     <div className="content__cat ">

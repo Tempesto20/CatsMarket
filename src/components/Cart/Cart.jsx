@@ -8,6 +8,7 @@ function Cart(props) {
 // Данные внутри корзины 
     const cartContexn = useContext(CartContexn); 
 
+   
     //const totalAmount = cartContexn.totalAmount; 
   
     const totalAmount = cartContexn.items.reduce( (currentValue, item)=>{
@@ -20,29 +21,28 @@ function Cart(props) {
 
     const hasItems = cartContexn.items.length > 0 ; //Отображает кнопку, только тогда, когда имеются заказы
 
-    const removeCartItemHandler =(id)=>{
-
-    }
-
-    const addCartItemHandler =(item)=>{
-
-    }
+    const removeCartItemHandler = (id) => {
+      cartContexn.removeItem(id);
+    };
+  
+    const addCartItemHandler = (item) => {
+      cartContexn.addItem({ ...item, amount: 1 });
+    };
 
     const cartItems = (
-        <ul className={styles['cart-items']}>
-        { cartContexn.items.map( (item) =>(
-                //<li>{item.name}</li>
-                <CartItem 
-                key={item.id}
-                img={item.img}
-                name={item.name}
-                price={item.price}
-
-                onRemove={removeCartItemHandler.bind(null, item)}
-                onAdd={addCartItemHandler.bind(null, item.id)}
-                />
-                ))}      
-            </ul>
+      <ul className={styles["cart-items"]}>
+        {cartContexn.items.map((item) => (
+          <CartItem
+            key={item.id}
+            img={item.img}
+            name={item.name}
+            //amount={item.amount}
+            price={item.price}
+            onAdd={addCartItemHandler.bind(null, item)}
+            onRemove={removeCartItemHandler.bind(null, item.id)}
+          />
+        ))}
+      </ul>
     );
     //  amount={item.amount}
 
