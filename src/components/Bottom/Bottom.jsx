@@ -7,9 +7,13 @@ import * as Yup from 'yup';
 class Bottom extends React.Component{
     render() {
 
+const errorMessange = <div className="errorMessange">Введите корректный емаил</div>;
+
   return (
     <div className="botton__content">
         
+        
+
     <div className="bottom__conteiner section-container">
         <div className="bottom__background">
             <div className="bottom__row">
@@ -24,13 +28,13 @@ class Bottom extends React.Component{
                    
                     email: Yup.string()
                         .email('Email is invalid')
-                        .required('Введите корректный Email'),
+                        .required(errorMessange),
                     
                 })}
                 onSubmit={values => {
                   //console.log(values)  
                 }}
-                render={({ errors, status, touched }) => (
+                render={({ errors, touched }) => (
                 <Form>
                     <div className="bottom_link">
                         <div className="form-group bottom__email" >

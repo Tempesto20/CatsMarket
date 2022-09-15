@@ -29,15 +29,15 @@
     white-space: nowrap;
     margin: 83px 87px 0px 120px;
     @media (max-width: $xl){
-        margin: 40px 0px 0px 10px;
+        margin: 40px 0px 0px 20px;
     }
     @media (max-width: $md){
-        margin: 40px 0px 0px 10px;
+        margin: 40px 0px 0px 20px;
     } 
     @media (max-width: $sm){
         font-size: 40px;
         line-height: 40px;
-        margin: 30px 0px 0px 10px;
+        margin: 30px 0px 0px 20px;
     } 
 }
 .bottom_link {
@@ -65,15 +65,15 @@
     margin: 60px 60px 0px 0px;
     @media (max-width: $xl){
         width: 250px;
-        margin: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 20px;
     }
     @media (max-width: $md){
         max-width: 250px;
-        margin: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 20px;
     } 
     @media (max-width: $sm){
         width: 200px;
-        margin: 0px 0px 0px 10px;
+        margin: 0px 0px 0px 20px;
     } 
 }
 
@@ -120,11 +120,11 @@
         margin: 20px 0px 0px 40px;
     }
     @media (max-width: $md){
-        margin: 10px 0px 0px 10px;
+        margin: 10px 0px 0px 20px;
     } 
     @media (max-width: $sm){
         max-width: 200px; 
-        margin: 10px 0px 0px 10px;
+        margin: 10px 0px 0px 20px;
     } 
   }
   button.but {
@@ -190,13 +190,13 @@
     margin: 26px 50px 80px 120px;
     @media (max-width: $xl) {
         white-space: nowrap;
-        margin: 20px 0px 40px 10px;
+        margin: 20px 0px 40px 20px;
     }
     @media (max-width: $md){
-        margin: 30px 0px 0px 10px;
+        margin: 30px 0px 0px 20px;
     } 
     @media (max-width: $sm){
-        margin: 30px 0px 0px 10px;
+        margin: 30px 0px 0px 20px;
     } 
 }
 .bottom__input {
@@ -205,10 +205,10 @@
         margin: 20px 0px 0px 30px;
     }
     @media (max-width: $md){
-        margin: 20px 0px 0px 10px;
+        margin: 20px 0px 0px 20px;
     } 
     @media (max-width: $sm){
-        margin: 20px 0px 0px 10px;
+        margin: 20px 0px 0px 20px;
     } 
 }
 .input__bottom{
@@ -231,4 +231,10 @@
     @media (max-width: $sm){
         margin: -22px 0px 30px 40px;
     } 
+}
+
+.errorMessange{
+    @media (max-width: $xl) {
+        margin-left: 20px;
+    }
 }
