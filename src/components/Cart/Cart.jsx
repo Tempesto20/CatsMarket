@@ -8,7 +8,6 @@ function Cart(props) {
 // Данные внутри корзины 
     const cartContexn = useContext(CartContexn); 
 
-   
     //const totalAmount = cartContexn.totalAmount; 
   
     const totalAmount = cartContexn.items.reduce( (currentValue, item)=>{
@@ -18,6 +17,7 @@ function Cart(props) {
   },   0  );  
 
     //console.log(cartContexn);
+
 
     const hasItems = cartContexn.items.length > 0 ; //Отображает кнопку, только тогда, когда имеются заказы
 

@@ -1,24 +1,19 @@
-import React from 'react';
+import React,{useContext} from 'react';
 
 import logoSvg from '../../assets/img/svg/logo.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import '../../scss/components/header.scss';
 
+import CatBlock from '../../context/CatBlock';
 
 
 
 
 function Header(props) {
-/*
-    let lol =  props.onCatHeader;
-    console.log(lol);
-    lol =(headCat)=>{
-        //let kek = event;
-        console.log(headCat);
-    }
-*/
-    //console.log(props.onCatHeader);
-    
+
+    const catBlock = useContext(CatBlock);
+    const catLength = catBlock.length;
+    //console.log(catLength);
 
     return (
         <header className="header">
@@ -61,7 +56,7 @@ function Header(props) {
                         <div className="header__block">
                             <div className="header__search">
                                 <div className="header__found">
-                                    <p>Найдено 349 котов</p>
+                                    <p>Найдено {catLength} котов</p>
                                 </div>
                             </div>
                             

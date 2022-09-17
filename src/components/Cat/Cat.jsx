@@ -91,7 +91,6 @@ let CATS_BLOCK = [
 ];
 function Cat(props) {
 
-
     const catList = CATS_BLOCK.map(cat => (
 		<Cards 
 		  key={cat.id} 
@@ -139,6 +138,10 @@ function Cat(props) {
 		////kek = catsBlock.length;
 		//console.log(kek);
 		//props.kek();
+
+		//console.log(CurrentRoute);
+
+
 
 	return (
     <div className="content__cat ">
